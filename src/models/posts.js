@@ -12,4 +12,10 @@ const PostSchema = new mongoose.Schema({
   }
 });
 
+PostSchema.pre('save', function() {
+  if (!this.url) {
+    this.url = `${process.env.APP_URL}/files/${this.key}`;
+  }
+});
+
 module.exports = mongoose.model('Post', PostSchema);
