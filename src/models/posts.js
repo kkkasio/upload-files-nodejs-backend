@@ -36,7 +36,7 @@ PostSchema.pre('remove', function() {
       });
   } else {
     return promisify(fs.unlink)(
-      path.resolve(__dirname, '..', '..', 'tmp', 'uploads'.this.key)
+      path.resolve(__dirname, '..', '..', 'tmp', 'uploads', this.key)
     );
   }
 });
