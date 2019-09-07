@@ -11,7 +11,7 @@ const app = express();
  */
 
 mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
 });
 
 //habilitando o express para lidar com json

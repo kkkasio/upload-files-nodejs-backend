@@ -1,6 +1,8 @@
 const routes = require('express').Router();
 const multer = require('multer');
 
+const aws = require('aws-sdk');
+
 const multerConfig = require('./config/multer');
 
 const Post = require('./models/Posts');
@@ -31,7 +33,7 @@ routes.post('/posts', multer(multerConfig).single('file'), async (req, res) => {
     name,
     size,
     key,
-    url
+    url,
   });
 
   return res.json(post);
