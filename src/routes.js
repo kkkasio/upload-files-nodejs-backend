@@ -6,7 +6,11 @@ const multerConfig = require('./config/multer');
 const Post = require('./models/Posts');
 
 routes.get('/', (req, res) => {
-  return res.json({ error: 'false' });
+  return res.json({
+    name: 'Backend images upload',
+    version: '1.0.0',
+    github: 'https://github.com/kkkasio/upload-files-nodejs-backend',
+  });
 });
 
 routes.get('/posts', async (req, res) => {
