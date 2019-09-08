@@ -40,4 +40,4 @@ app.use(
 // chamando os arquivos de rotas
 app.use(require('./routes'));
 
-app.listen(3030);
+app.listen(process.env.PORT || 3000);
