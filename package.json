@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "yarn": "1.17.3"
+  },
   "dependencies": {
     "aws-sdk": "^2.524.0",
     "cors": "^2.8.5",
