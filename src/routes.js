@@ -1,11 +1,8 @@
-
 const routes = require('express').Router();
 const multer = require('multer');
-
 const aws = require('aws-sdk');
 
 const multerConfig = require('./config/multer');
-
 const Post = require('./models/Posts');
 
 routes.get('/', (req, res) => {
