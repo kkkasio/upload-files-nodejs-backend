@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
+const cors = require('cors');
 
 /**
  * database setup
@@ -16,6 +17,9 @@ mongoose.connect(process.env.MONGO_URL, {
 
 //habilitando o express para lidar com json
 app.use(express.json());
+
+// habilita o cors
+app.use(cors());
 
 // express consegue lidar com o padrão url encoded (facilita a parte de envio dos arquivos)
 app.use(express.urlencoded({ extended: true }));
@@ -36,4 +40,4 @@ app.use(
 // chamando os arquivos de rotas
 app.use(require('./routes'));
 
-app.listen(3000);
+app.listen(3030);
